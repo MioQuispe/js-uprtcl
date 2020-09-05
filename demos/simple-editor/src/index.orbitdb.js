@@ -60,6 +60,14 @@ import { SimpleWiki } from './simple-wiki';
 
   const ipfs = await IPFS.create(ipfsJSConfig);
 
+  ipfs.libp2p.on('peer:connect', peerInfo => {
+    console.log('connected to', peerInfo);
+  })
+
+  // console.log(`Connecting with pinner '${env.pinner.Bootstrap}'... `)
+  // await ipfs.swarm.connect(env.pinner.Bootstrap)
+  // console.log('done! ')
+
   const ipfsStore = new IpfsStore(ipfsCidConfig, ipfs, pinnerUrl);
   await ipfsStore.ready();
 

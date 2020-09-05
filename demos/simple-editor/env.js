@@ -7,7 +7,7 @@ export const env = {
       '/dns4/webrtc-star.discovery.libp2p.io/tcp/443/wss/p2p-webrtc-star/',
     ],
     Bootstrap: [
-      '/ip4/192.168.1.13/tcp/4003/ws/p2p/QmQRikSoUqDryMUuF5A4PCnJDUdHNL5Yp3feF2mTJJ5RYv',
+      '/ip4/192.168.0.112/tcp/4003/ws/p2p/QmQFEPVjrU6BK3iRYH4U3nbPv2D2CoyfALhft81bTemgJe',
     ],
   },
   ethers: {

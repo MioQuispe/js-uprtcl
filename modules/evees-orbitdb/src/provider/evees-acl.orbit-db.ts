@@ -28,13 +28,13 @@ export class EveesAccessControlOrbitDB implements AccessControlService {
     return userId === (await this.getOwner(uref));
   }
 
-  lense(): Lens {
+  lense() {
     return {
       name: 'evees-http:access-control',
       type: 'access-control',
-      render: (entity: string) => {
+      render: (details) => {
         return html`
-          <evees-orbitdb-permissions uref=${entity}>
+          <evees-orbitdb-permissions uref=${details.uref}>
           </evees-orbitdb-permissions>
         `;
       },

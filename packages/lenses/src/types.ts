@@ -1,10 +1,10 @@
 import { TemplateResult } from 'lit-element';
 import { Entity } from '@uprtcl/cortex';
 
-export interface Lens {
+export interface Lens<T = any> {
   name: string;
-  render: (entity: any, context?: any) => TemplateResult;
   type?: string;
+  render: (input: T) => TemplateResult;
 }
 
 export type LensSelector = (
